@@ -8,20 +8,33 @@
  */
 
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Container, Grid } from 'semantic-ui-react';
+import StatWidget from 'containers/StatWidget/';
 
-import HomePage from 'containers/HomePage/Loadable';
-import NotFoundPage from 'containers/NotFoundPage/Loadable';
+// react-vis styling
+import '../style.css';
 
 import GlobalStyle from '../../global-styles';
+import GraphWidget from '../GraphWidget';
 
 export default function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Grid columns="equal">
+        <Grid.Row>
+          <Grid.Column width="2" />
+          <Grid.Column width="10">
+            <Container className="graph-container">
+              <GraphWidget />
+            </Container>
+          </Grid.Column>
+          <Grid.Column>
+            <Container className="stat-container">
+              <StatWidget />
+            </Container>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
       <GlobalStyle />
     </div>
   );

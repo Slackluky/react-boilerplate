@@ -1,0 +1,44 @@
+
+
+.graph-container .card{
+    background-color: rgb(247, 255, 255);
+    width: 100%;
+    height: 510px;
+}
+
+.stat-container .card{
+    background-color: #008cff;
+    padding: 20px;
+    padding-bottom: 0px;
+    width: 100%;
+    color: aliceblue;
+    max-height: 540px;
+    margin: 0 auto;
+}
+.ui.statistic>.label, .ui.statistics .statistic>.label{
+    color: aliceblue;
+    text-transform: none;
+    text-align: left
+}
+
+.ui.statistic>.value, .ui.statistics .statistic>.value{
+    text-transform: none;
+    text-align: left
+}
+
+.ui.divider:not(.vertical):not(.horizontal){
+    border-top: none;
+    border-bottom: 2px solid #fff
+}
+
+.ui.inverted.table{
+    background: #008cff;
+}
+
+.ui.button{
+    background: transparent;
+    color: aliceblue;
+    font-weight: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
